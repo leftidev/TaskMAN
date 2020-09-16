@@ -6,10 +6,13 @@ using System.ComponentModel.DataAnnotations;
 
 namespace TaskMAN.Models
 {
-    public class Task
+    public class TaskEntry
     {
         // ID is the primary key in the DB
         public int ID { get; set; }
-        public string Title { get; set; }
+        public string Description { get; set; }
+
+        [DataType(DataType.DateTime)]
+        public DateTime DateCreated { get; set; }
     }
 }
