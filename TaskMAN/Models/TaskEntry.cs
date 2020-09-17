@@ -14,5 +14,14 @@ namespace TaskMAN.Models
 
         //[DataType(DataType.DateTime)]
         //public DateTime DateCreated { get; set; }
+        public DateTime CreatedDate { get; set; }
+
+        public TaskEntry()
+        {
+            this.CreatedDate = DateTime.Now;
+        }
+
     }
+
+
 }

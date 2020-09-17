@@ -17,6 +17,7 @@ namespace TaskMAN.Pages.TaskEntries
         public CreateModel(TaskMAN.Data.TaskMANContext context)
         {
             _context = context;
+            
         }
 
         public IActionResult OnGet()

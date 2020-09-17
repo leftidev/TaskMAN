@@ -5,16 +5,19 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
 
-<p>
-    <a asp-page="Create">Create New</a>
-</p>
+
+
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.TaskEntry[0].Description)
+                <!--@Html.DisplayNameFor(model => model.TaskEntry[0].Description)-->
+                <h2>Tehtävä</h2>
+            </th>
+            <th>
+                <!--@Html.DisplayNameFor(model => model.TaskEntry[0].CreatedDate)-->
+                <h2>Luotu</h2>
             </th>
             <th></th>
         </tr>
@@ -26,11 +29,17 @@
                 @Html.DisplayFor(modelItem => item.Description)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+                @Html.DisplayFor(modelItem => item.CreatedDate)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ID">Muokkaa</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">Tiedot</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID">Poista</a>
             </td>
         </tr>
 }
     </tbody>
 </table>
+<h2>
+    <a asp-page="Create" class="btn btn-success">Lisää tehtävä</a>
+</h2>
