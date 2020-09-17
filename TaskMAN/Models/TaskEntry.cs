@@ -18,7 +18,7 @@ namespace TaskMAN.Models
 
         public TaskEntry()
         {
-            this.CreatedDate = DateTime.UtcNow;
+            this.CreatedDate = DateTime.Now;
         }
 
     }
