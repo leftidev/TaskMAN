@@ -16,6 +16,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.TaskEntry[0].Description)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TaskEntry[0].CreatedDate)
+            </th>
             <th></th>
         </tr>
     </thead>
@@ -24,6 +27,9 @@
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedDate)
             </td>
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
