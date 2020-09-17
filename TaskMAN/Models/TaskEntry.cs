@@ -12,8 +12,6 @@ namespace TaskMAN.Models
         public int ID { get; set; }
         public string Description { get; set; }
 
-        //[DataType(DataType.DateTime)]
-        //public DateTime DateCreated { get; set; }
         public DateTime CreatedDate { get; set; }
 
         public TaskEntry()
