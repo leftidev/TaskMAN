@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Globalization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -11,6 +12,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using TaskMAN.Data;
 
+
 namespace TaskMAN
 {
     public class Startup
@@ -18,6 +20,9 @@ namespace TaskMAN
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+            // Set date localization
+            CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("de-DE");
+            CultureInfo.DefaultThreadCurrentUICulture = new CultureInfo("de-DE");
         }
 
         public IConfiguration Configuration { get; }
